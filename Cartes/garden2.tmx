@@ -5,17 +5,17 @@
  </tileset>
  <layer name="bg1" width="16" height="16">
   <data encoding="base64" compression="zlib">
-   eJxjYKAc1NFJz1AHPgPtgFEwKMFA5h8AvBwCRQ==
+   eJxjYKAc1NFJDzWAD5300NKcUTC8wEDmHwB+SgLd
   </data>
  </layer>
  <layer name="bg2" width="16" height="16">
   <data encoding="base64" compression="zlib">
-   eJxjYKAcyAKxPIlYDkk/qXphmFj9PkjYjEL9PmToh2F2EtwfTUX/w7ACGiZFP0wPMp8c/aTaj2yvApocIf3Y7MSln5jwpjT8cenXJUOvHgN1AABAzBmd
+   eJxjYKAcyAKxPIlYDkk/Mep9sIgRo98HDZuRqB+ETbGYQ4p+GGYnwf3RRJhHqv0KaJgU/TA9yHxy9JNqP7K9CmhyhPRjsxOXfmLCm9Lwx6Vflwy9egzUAQCgCxoN
   </data>
  </layer>
  <layer name="obstacles" width="16" height="16">
   <data encoding="base64" compression="zlib">
-   eJyrY2BgqKMQkwuI0c8DxJxomIcE/Vx4xKitXxKLWmR3M6CxkfVLoWFiADb3S6KxJRmwuwuXfkIA2Txc/sdlHz77selB9wu6HD3SHy73ENJPTBhQy/2UYAB6oB/5
+   eJyrY2BgqKMQkwuI0c8DxJxQNicU85CgHxvgIkE/Fx45dP2SWNRwImEGNDayfik0TAzA5n5JNLYkA3Z34dJPCCCbh8v/uOzDZz82Peh+QZejR/rD5R5C+okJA2q5nxIMACFQH9w=
   </data>
  </layer>
  <layer name="joueur" width="16" height="16">
