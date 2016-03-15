@@ -15,17 +15,15 @@ On peut par exemple afficher ce genre de map:
 
 ![alt tag](https://github.com/yannche/pySpriteWorld/blob/master/Cartes/gardenofdelight.png)
 
-Pour tester ce code, et jouer au clavier, taper
-
-    python main_keyboard.py
 
 Pour voir la demo d'utilisation du ramasseur de laitues, taper
 
-    python exercice_laitues.py
+    python -m Tests.exercice_laitues
 
 Pour une demo du simulateur de robot, taper
 
-    python exercice_robot_sim.py
+    python -m Tests.exercice_robot_sim
+
 
 Les cartes doivent être construites avec le logiciel Tiled ( http://www.mapeditor.org ) et exportées au format json
 
