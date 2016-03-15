@@ -32,7 +32,7 @@ Les cartes doivent être construites avec le logiciel Tiled ( http://www.mapedit
 
 Dans ces cartes, les sprites sont organisees par Layers.
 Par convention, ces layers doivent etre l'une des suivantes:
-"bg1","bg2","obstacle","ramassable","joueur","en_hauteur"
+"bg1","bg2","obstacle","ramassable","joueur"
 
 Chaque layer a des conventions qui lui sont propres:
 
