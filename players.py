@@ -41,15 +41,21 @@ class Player(MovingSprite):
             pygame.K_t:     partial(self.throw_ray,radian_angle=None,mask=mask,layers=gDict)
         }
 
-
-    def cherche_ramassable(self,layers,filtre = lambda x:True,verb=False):
-        for obj in layers["ramassable"]:
+    def cherche_contact(self,layers,layername,filtre = lambda x:True,verb=False):
+        # look for object on the same tile as the player
+        for obj in layers[layername]:
             if filtre(obj):
                 if self.mask.overlap(obj.mask,(obj.rect.x - self.rect.x,obj.rect.y - self.rect.y)):
                     if verb: print ("j'en ai trouve un")
                     return obj
-        if verb: print ("rien a ramasser")
+        if verb: print ("rien trouve")
         return None
+
+    def cherche_ramassable(self,layers,filtre = lambda x:True,verb=False):
+        return self.cherche_contact(layers,"ramassable",filtre,verb)
+
+    def cherche_mortel(self,layers,filtre = lambda x:True,verb=False):
+        return self.cherche_contact(layers,"lethal",filtre,verb)
 
     def ramasse(self,layers,verb=False):
         o = self.cherche_ramassable(layers)
@@ -107,4 +113,3 @@ class Turtle(Player):
                 polygons.draw_arrow(img,w/2,h/2,a * pi/180,r=Turtle.taille_geometrique-14,clr=glo.WHITE)
                 #pygame.gfxdraw.aacircle(self.image, w/2,h/2, self.taille_geometrique/2 - self.penwidth,glo.WHITE)
         return Turtle.static_imglist
-

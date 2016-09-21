@@ -57,6 +57,14 @@ def avance(p=None):
     p = player if p is None else p
     p.forward(p.rect.width)
     game.mainiteration()
+    if ( p.cherche_mortel(game.layers) ):
+        import time
+        print('####################')
+        print('####  Game Over ####')
+        print('####################')
+        time.sleep(2)
+        pygame.quit()
+        quit()
     return p.position_changed()
 
 @check_init_game_done
