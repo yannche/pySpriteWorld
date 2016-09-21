@@ -39,7 +39,7 @@ class Game(object):
         return cls.single_instance
 
 
-    def __init__(self, fichiercarte=None, _SpriteBuilder=None):
+    def __init__(self, fichiercarte=None, _SpriteBuilder=None,screen_width=None,screen_height=None):
         # if no parameter is given, then __init__ will just create an empty Game object
         if fichiercarte is None or _SpriteBuilder is None:
             return
@@ -54,11 +54,15 @@ class Game(object):
         self.spriteBuilder = _SpriteBuilder(fichiercarte)
 
         # cree la fenetre pygame
-        self.screen = pygame.display.set_mode([self.spriteBuilder.spritesize * self.spriteBuilder.rowsize,
-                                               self.spriteBuilder.spritesize * self.spriteBuilder.colsize])
+        if screen_width is None or screen_height is None:
+            screen_width = self.spriteBuilder.spritesize * self.spriteBuilder.rowsize
+            screen_height = self.spriteBuilder.spritesize * self.spriteBuilder.colsize
+        else:
+            assert (screen_width % self.spriteBuilder.spritesize)== 0 and (screen_height % self.spriteBuilder.spritesize)== 0, 'Attention : La taille de la fenetre doit etre un multiple de la taille des sprites'
 
+        self.screen = pygame.display.set_mode([screen_width,screen_height])
 
-        pygame.display.set_caption("pySpriteWorld Experiment")
+        pygame.display.set_caption("pySpriteWorld")
         self.spriteBuilder.screen = self.screen
 
         self.fps = 60

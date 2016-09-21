@@ -27,7 +27,7 @@ class TurtleSpriteBuilder(SpriteBuilder):
 
 game = Game()
 
-def init(_boardname=None,_spriteBuilder=TurtleSpriteBuilder):
+def init(_boardname=None,_spriteBuilder=TurtleSpriteBuilder,screen_width=None,screen_height=None):
     """
     Reinitialise la carte et l'ensemble des parametres
     """
@@ -35,7 +35,7 @@ def init(_boardname=None,_spriteBuilder=TurtleSpriteBuilder):
     pygame.quit()
 
     name = _boardname if _boardname else 'robot_obstacles'
-    game = Game('Cartes/' + name + '.json', _spriteBuilder)
+    game = Game('Cartes/' + name + '.json', _SpriteBuilder=_spriteBuilder,screen_width=screen_width,screen_height=screen_height)
 
     game.fps = 200  # frames per second
     game.mainiteration()
