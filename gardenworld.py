@@ -28,6 +28,11 @@ class GardenSpriteBuilder(SpriteBuilder):
 
 game = Game()
 
+
+def rempli_panier_de_citrouilles(n=3):
+    for i in range(n):
+        game.player.inventory.add( game.spriteBuilder.basicSpriteFactory('ramassable',(10,12),x=0,y=0) )
+
 def init(_boardname=None):
     global player,game
     name = _boardname if _boardname is not None else 'gardenofdelight'
@@ -37,7 +42,8 @@ def init(_boardname=None):
     game.fps = 60  # frames per second
     game.mainiteration()
     player = game.player
-
+    if _boardname in ['planter_enclos','panier_plein']:
+        rempli_panier_de_citrouilles(100)
 
 
 @check_init_game_done
