@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="star" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="../SpriteSheet-32x32/star.png" width="512" height="512"/>
+ </tileset>
+ <layer name="bg1" width="16" height="16" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjFQAAAQAAAE=
+  </data>
+ </layer>
+ <layer name="bg2" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjFQAAAQAAAE=
+  </data>
+ </layer>
+ <layer name="obstacles" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJwNwwMUFQYAAMCfscxl2y3btm3btm3btl1bNtaWbdu8e++CBAKBoAYzuCEMaShDG8aw/mE4wxvBiEYyslGMajSjG8OY/mksYxvHuMYzvglMaCITm8SkJjO5KUxpKlObxrSmM70ZzGgmM/uXWcxqNrObw5zmMrd5zGs+81vAghaysEUsajGLW8KSlrK0ZSxrOctbwYpWsrJVrGo1q1vDmtaytnWsaz3r28CGNrKxTWxqM5vbwpa2srVtbGs729vBjnays13saje728Oe9rK3fexrP/s7wIEOcrBDHOowhzvCkY5ytGMc6zjHO8GJTnKyU5zqNKc7w5nOcrZznOs857vAhS5ysUtc6jKXu8KVrnK1a1zrOte7wY1ucrNb3Oo2t7vDne5yt3vc6z73e8C//ceDHvKwRzzqMY97wpOe8rRnPOs5z3vBf73of/7vJS97xate87o3vOktb3vHu97zvg986CMf+8SnPvO5L3zpK1/7xre+870f/OgnP/vFr37zuz/86S8DQQKB37YXf4I=
+  </data>
+ </layer>
+ <layer name="joueur" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYBg+4NRAO2AUjIIhBgCLJgDL
+  </data>
+ </layer>
+</map>
