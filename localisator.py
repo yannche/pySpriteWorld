@@ -6,15 +6,17 @@ print("---==[ Fonction pour connaitre la valeur d'un pixel ]==---")
 print("getpixel\n\n")
 
 def init(filename=None):
+    path1 = 'SpriteSheet-32x32/'
+    path2 = '/home/personne/Code/pySpriteWorld/SpriteSheet-32x32/'
+
     robosim.init('vide')
     if filename is None:
-        filename = 'SpriteSheet-32x32/star.png'
+        filename = 'star.png'
 
     try:
-        s = pygame.image.load(filename)
+        s = pygame.image.load(path1+filename)
     except:
-        filename = '/home/personne/Code/pySpriteWorld/SpriteSheet-32x32/star.png'
-        s = pygame.image.load(filename)
+        s = pygame.image.load(path2+filename)
 
     game.layers['bg2'].add( MySprite('fond',None,0,0,[s]))
     game.layers['bg2'].draw(game.background)
