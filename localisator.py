@@ -10,7 +10,12 @@ def init(filename=None):
     if filename is None:
         filename = 'SpriteSheet-32x32/star.png'
 
-    s = pygame.image.load(filename)
+    try:
+        s = pygame.image.load(filename)
+    except:
+        filename = '/home/personne/Code/pySpriteWorld/SpriteSheet-32x32/star.png'
+        s = pygame.image.load(filename)
+
     game.layers['bg2'].add( MySprite('fond',None,0,0,[s]))
     game.layers['bg2'].draw(game.background)
     while True:
