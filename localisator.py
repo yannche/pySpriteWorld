@@ -43,12 +43,16 @@ def getpixel(x=None,y=None):
 
 
 sujet="""
+-----------------------------------------------------------------------------
 Le but de ce TP est de localiser le robot (en simulation d'abord) sans utiliser
 la fonction "position".
 
-Vous utiliserez en particulier la fonction getpixel. (voir l'aide)
 
+Vous utiliserez en particulier la fonction getpixel. (voir l'aide)
 Initialement, le robot est placé au hazard dans la fenetre
+-----------------------------------------------------------------------------
+
+
 
 1) Detection statique de position
 * construisez une liste faite de milliers de positions aleatoires [(3,23),(501,83),...]
@@ -68,13 +72,25 @@ vous allez maintenant deplacer le robot ET les position+orientation de la liste 
 * ecrivez une fonction qui fasse avancer de 1 pixel chaque triple de la liste, dans la direction qui est la sienne
 * faites avancer le robot en ligne droite sur 50 pixels, et faites de meme avec les triplets de la liste
 * utilisez la fonction filtrage 50 fois de suite pour eliminer les triplets qui ne correspondent pas aux observations
+
+Filtrage probabiliste
 * ecrivez une fonction "filtrage_probabiliste", qui elimine de la liste les triplets
   qui ne correspondent pas aux observations avec une probabilite de 1/10.
 * relancez votre code avec filtrage_probabiliste
+
+Deplacements et Rotations
 * faites en sorte que le robot (et les triplets) puissent tourner sur eux-meme maintenant
+
+Maintenir le nombre d'hypothese constant
 * on souhaite que la liste ait toujours le meme nombre de triplets. Quand on elimine un triplet, rajoutez-en un tire au hazard
-* ajoutez une "duree de vie" a chaque triplet, pour voir quels triplets sont les plus probables
+* ajoutez une "duree de vie" a chaque triplet, pour voir quels triplets qui ont survecu le plus longtemps
 
+Comptage des erreurs
+* ajoutez un champs "nombre d'erreur" a chaque tuple. Ce champs est incremente de 1 a chaque fois qu'un tuple n'est pas consistent avec les observations
+* ecrivez une fonction "filtrage_k_erreurs" qui enleve les tuple dont le nombre d'erreurs depasse un certain seuil
 
+Ajout de Bruit
+* Pour simuler le vrai robot, on va rajouter du bruit aux Deplacements
+* creez une fonction avBruit() qui avance d'un nombre de pixels compris entre 0.9 et 1.1
 
 """
